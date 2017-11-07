@@ -1,8 +1,16 @@
+import java.awt.Image;
 
-public class Imagine {
-	private String numeImagine;
+public class Imagine extends AbstractElement{
+	private String pathImagine;
+	private Image data;
 	
-	public Imagine() {
+	public Imagine(String fileName) {
+		pathImagine = fileName;
+	}
+
+	public void print() {
+		System.out.println(this.pathImagine);
 		
 	}
+
 }
