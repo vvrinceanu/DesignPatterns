@@ -19,8 +19,13 @@ public class AbstractElement implements Element{
 	}
 
 	@Override
-	public void print() {
-		// TODO Auto-generated method stub
+	public String print() {
+		return "";
+		
+	}
+
+	@Override
+	public void accept(Visitor v) {
 		
 	}
 

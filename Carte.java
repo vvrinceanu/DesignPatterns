@@ -10,4 +10,12 @@ public class Carte {
 	public Carte() {
 		
 	}
+	
+	public List<Element> getContinut() {
+		return this.continut;
+	}
+	
+	public void addContinut(Element e) {
+		this.continut.add(e);
+	}
 }

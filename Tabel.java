@@ -6,9 +6,13 @@ public class Tabel extends AbstractElement{
 		
 	}
 
-	public void print() {
-		System.out.println(this.numeTabel);
+	public String print() {
+		return this.numeTabel;
 		
+	}
+	
+	public void accept(Visitor v) {
+		v.visitTabel(this);
 	}
 
 }

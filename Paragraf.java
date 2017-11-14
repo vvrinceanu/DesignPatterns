@@ -1,5 +1,5 @@
 
-public class Paragraf extends AbstractElement{
+public class Paragraf extends AbstractElement {
 	private String text;
 	
 	public Paragraf(String text) {
@@ -10,9 +10,13 @@ public class Paragraf extends AbstractElement{
 		return this.text;
 	}
 
-	public void print() {
-		System.out.println(this.text);
+	public String print() {
+		return this.text;
 		
+	}
+	
+	public void accept(Visitor v) {
+		v.visitParagraf(this);
 	}
 
 }

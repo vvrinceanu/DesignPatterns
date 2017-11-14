@@ -18,11 +18,21 @@ public class Sectiune implements Element{
 		return continutSectiune.get(index);
 	}
 	@Override
-	public void print() {
-		System.out.println(this.titlu);
+	public String print() {
+		String sectiune="";
+		sectiune = sectiune + this.titlu +"\n";
 		for(Element e : continutSectiune) {
-			System.out.println(e);
+			sectiune = sectiune + e.print() + "\n";
 		}
+		return sectiune;
+	}
+	@Override
+	public void accept(Visitor v) {
+		v.visitSectiune(this);
+	}
+	
+	public List<Element> getContinut() {
+		return this.continutSectiune;
 	}
 	
 }
