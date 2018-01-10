@@ -1,3 +1,5 @@
+package Carte;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -31,7 +33,12 @@ public class XmlVisitor implements Visitor {
 
 	@Override
 	public void visitSectiune(Sectiune s) {
-		this.xml = this.xml + "<Sectiune>" + s.print() + "</Sectiune> \n";
+		this.xml = this.xml + "<Sectiune>\n" + s.print() + " \n";
+		
+		for(Element e : s.getContinut()) {
+			e.accept(this);
+		}
+		this.xml = this.xml + "</Sectiune>";
 	}
 	
 	public void writeXML() throws IOException {

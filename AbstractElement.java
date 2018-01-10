@@ -1,3 +1,4 @@
+package Carte;
 
 public class AbstractElement implements Element{
 
@@ -20,13 +21,17 @@ public class AbstractElement implements Element{
 
 	@Override
 	public String print() {
-		return "";
+		return "lalal";
 		
 	}
 
 	@Override
 	public void accept(Visitor v) {
 		
+	}
+	
+	public Element clone() {
+		return this;
 	}
 
 }

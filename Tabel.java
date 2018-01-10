@@ -1,3 +1,4 @@
+package Carte;
 
 public class Tabel extends AbstractElement{
 	private String numeTabel;
@@ -13,6 +14,10 @@ public class Tabel extends AbstractElement{
 	
 	public void accept(Visitor v) {
 		v.visitTabel(this);
+	}
+	
+	public Element clone() {
+		return this;
 	}
 
 }

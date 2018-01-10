@@ -1,3 +1,4 @@
+package Carte;
 
 public class AlignLeft implements AlignStrategy{
 

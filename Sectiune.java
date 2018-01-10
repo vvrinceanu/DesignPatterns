@@ -1,13 +1,20 @@
+package Carte;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sectiune implements Element{
+public class Sectiune extends ObservableElement{
 	private String titlu;
 	private List<Element> continutSectiune = new ArrayList<Element>();
+	
+	public Sectiune(String titlu) {
+		this.titlu = titlu;
+	}
 	
 	@Override
 	public void add(Element e) throws Exception {
 		continutSectiune.add(e);
+		this.myNotify();
 	}
 	@Override
 	public void remove(Element e) throws Exception {
@@ -19,12 +26,7 @@ public class Sectiune implements Element{
 	}
 	@Override
 	public String print() {
-		String sectiune="";
-		sectiune = sectiune + this.titlu +"\n";
-		for(Element e : continutSectiune) {
-			sectiune = sectiune + e.print() + "\n";
-		}
-		return sectiune;
+		return this.titlu;
 	}
 	@Override
 	public void accept(Visitor v) {
@@ -33,6 +35,10 @@ public class Sectiune implements Element{
 	
 	public List<Element> getContinut() {
 		return this.continutSectiune;
+	}
+	
+	public Element clone() {
+		return this;
 	}
 	
 }

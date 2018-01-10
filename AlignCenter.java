@@ -1,3 +1,4 @@
+package Carte;
 
 public class AlignCenter implements AlignStrategy{
 

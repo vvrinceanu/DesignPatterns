@@ -1,3 +1,4 @@
+package Carte;
 
 public class ImageProxy extends AbstractElement {
 	private String fileName;

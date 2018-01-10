@@ -1,3 +1,5 @@
+package Carte;
+
 import java.awt.Image;
 
 public class Imagine extends AbstractElement{
